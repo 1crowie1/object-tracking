@@ -5,8 +5,9 @@ def main() -> None:
     Main function.
     """
     video = 'videos/dvd_screen_saver.mp4'
-    seconds = 300
+    seconds = int(input("How long are collisions to be counted for (Seconds): "))
     wall_collisions = dvd.get_collisions(video, seconds)
+    print(f"There were {wall_collisions} wall collisions in {seconds} seconds of the video.")
 
 if __name__ == "__main__":
     main()
