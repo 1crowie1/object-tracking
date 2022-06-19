@@ -2,7 +2,7 @@
 Object tracking practice using open-cv
 
 Installation and Environment
-Clone Repository and Navigate to Working Dirrectory
+- Clone Repository and Navigate to Working Dirrectory
 1. python -m venv venv
 2. venv\Scripts\Activate
 3. pip install -r requirements.txt
