@@ -52,7 +52,7 @@ coverage.xml
 .pytest_cache/
 
 # Videos
-/videos
+/videos/
 .mp4
 .avi
 .mov
