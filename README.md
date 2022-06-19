@@ -16,5 +16,8 @@ Output:
 - Display of live video, drawn contours of object and collision count
 - Total Number of Collisions in x amount of time
 
+Testing:
+- Testing done with following video (https://www.youtube.com/watch?v=NEdjQUZVM6Q&t=10s)
+
 Visual:
 ![image](https://user-images.githubusercontent.com/39574251/174465697-07201e46-fcfe-40ee-92f1-eb55c7ef2ddb.png)
