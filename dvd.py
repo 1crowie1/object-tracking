@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def get_collisions(video_path: str, duration: int) -> int:
+def get_collisions(video_path: str, duration: int, visibility: int) -> int:
     """
     Return the number of collisions in the video.
     """
@@ -28,7 +28,7 @@ def get_collisions(video_path: str, duration: int) -> int:
 
         # find and contours in the thresholded image
         contours, hierarchy = cv2.findContours(image=thresh, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_NONE)
-        cv2.drawContours(image=frame, contours=contours, contourIdx=-1, color=(255, 255, 255), thickness=1, lineType=cv2.LINE_AA)
+        cv2.drawContours(image=frame, contours=contours, contourIdx=-1, color=(255, 255, 255), thickness=visibility, lineType=cv2.LINE_AA)
 
         # check if any of the contours are in the colision zone
         for cnt in contours : 
@@ -73,6 +73,8 @@ def get_collisions(video_path: str, duration: int) -> int:
         # if the user specified time is reached, break
         if frame_num > duration*fps:
             break
+    else:
+        print("Video Ended.")
 
     cap.release()
     cv2.destroyAllWindows()
